@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Lsystem_tree_generation.dir/src/main.cpp.o CMakeFiles/Lsystem_tree_generation.dir/src/lsys.cpp.o CMakeFiles/Lsystem_tree_generation.dir/src/turtle.cpp.o -o ../Lsystem_tree_generation  -lGL -lGLU /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 
