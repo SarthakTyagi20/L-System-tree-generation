@@ -29,8 +29,7 @@ private:
 
 public:
 
-    float branch_contractio_ratio = 0.90;
-    // float tapering_ratio = 0.95;
+    float narrowing_down = 0.90;
     
     Turtle()
     {
