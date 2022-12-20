@@ -84,12 +84,13 @@ void Turtle::drawCircle()
     //taking the current position of the turtle and making a circle around it. 
     for (angle = 0.0f; angle <= (2.0f * Gl_Pi); angle += 0.1f)
     {
-        x = 4.0f * sin(angle) + current_state.x;
-        y = 4.0f * cos(angle) + current_state.y;
+        x = 3.0f * sin(angle) + current_state.x;
+        y = 3.0f * cos(angle) + current_state.y;
 
-        GLfloat x1 = 3.0f * sin(angle) + current_state.x;
-        GLfloat y1 = 3.0f * cos(angle) + current_state.y;
+        GLfloat x1 = 2.0f * sin(angle) + current_state.x;
+        GLfloat y1 = 2.0f * cos(angle) + current_state.y;
 
+        
         glVertex3f(x1, y1, 0.0f);
         glVertex3f(x, y, 0.0f);
     }
