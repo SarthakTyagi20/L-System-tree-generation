@@ -22,7 +22,7 @@ void Turtle::draw()
     int b = current_state.y + (int)(len * sin(current_state.rotation));
     float lineWidth[2];
 
-    std::cout <<current_state.width <<"current width\n"; 
+//     std::cout <<current_state.width <<"current width\n"; 
     glLineWidth(current_state.width);
 
     glBegin(GL_LINES);
