@@ -32,33 +32,41 @@ void lsys::visualise_sequence(string food)
     float theta = 25.0; 
     Turtle turt;
     turt.translate(500, 0);
+
+    int for_fruits = 0;
+    bool trunk = true;
+    
     for (int i = 0; i < food.length(); i++) {
         char feeding = food[i];
 
-        switch(feeding){
-
-            case 'F':
-            turt.draw();
-            break;
-
-            case '+':
-            turt.RotateTurtle(theta);
-            break;
-
-            case '-':
-            turt.RotateTurtle(-theta);
-            break;
-
-            case '[':
+        if( feeding == 'X' && food[i+1] != '[' && for_fruits%5 == 0){
+            // std::cout <<"in lsys.cpp";
+            trunk = true;
+            turt.drawCircle();
+        }   
+         else if(feeding == '['){
             turt.save_Pos();
-            break;
-
-            case ']':
+            turt.changeWidth(0);
+        } else if(feeding == ']'){
             turt.retrieve_Pos();
-            break;
-
-            default:
-            break;
+            turt.changeWidth(0);
         }
+        else if(feeding == 'F'){
+            // std::cout <<"are we going here"; 
+            turt.draw();
+        } 
+        else if(feeding == '+'){
+            turt.RotateTurtle(theta);
+        } else if(feeding == '-'){
+            turt.RotateTurtle(-theta);
+        
+        }
+        // std::cout <<"out side of if";
+        else if(feeding == 'X' && food[i+1]!= '[' && for_fruits%5 != 0){
+            trunk = true;
+            turt.drawTriangle(); 
+        }
+        for_fruits++;
+
     }
 }
