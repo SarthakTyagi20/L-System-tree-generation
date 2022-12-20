@@ -15,6 +15,7 @@ class State{
         int x;
         int y;
         float rotation;
+        int width; 
 
 };
 
@@ -28,10 +29,14 @@ private:
 
 public:
 
+    float branch_contractio_ratio = 0.90;
+    // float tapering_ratio = 0.95;
+    
     Turtle()
     {
         len = 10; 
         current_state.rotation = pi/2; 
+        current_state.width = 50;
     }
 
     void translate(int new_x=0, int new_y=0);
@@ -45,6 +50,12 @@ public:
     void RotateTurtle(float angle=0);
 
     void draw();
+
+    void drawCircle(); 
+
+    void drawTriangle();
+
+    void changeWidth(int var);
 };
 
 #endif
