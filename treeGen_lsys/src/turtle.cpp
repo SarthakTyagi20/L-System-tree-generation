@@ -107,11 +107,11 @@ void Turtle::drawTriangle() {
     glColor3f(0.5f, 0.8f, 0.0f); 
     
     //drawing a triangle around the current position
-    glVertex3f(current_state.x + 5.0f, current_state.y, 0.0f);
-    glVertex3f(current_state.x - 5.0f, current_state.y, 0.0f);
-    glVertex3f(current_state.x + 5.0f, current_state.y, 0.0f);
+    glVertex3f(current_state.x + 4.0f, current_state.y, 0.0f);
+    glVertex3f(current_state.x - 4.0f, current_state.y, 0.0f);
+    glVertex3f(current_state.x + 4.0f, current_state.y, 0.0f);
     glVertex3f(current_state.x, current_state.y + 5.0f, 0.0f);
-    glVertex3f(current_state.x - 5.0f, current_state.y, 0.0f);
+    glVertex3f(current_state.x - 4.0f, current_state.y, 0.0f);
     glVertex3f(current_state.x, current_state.y + 5.0f, 0.0f);
 
     glEnd();
