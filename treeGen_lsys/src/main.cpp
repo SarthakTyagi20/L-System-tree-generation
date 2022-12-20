@@ -27,7 +27,7 @@ int main()
         glViewport(0, 0, display_w, display_h);
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
+         
         if (l.depth1 < levels) {
             l.depth1 = l.depth1 + 1;
             l.create_sequence("X", l.depth1, 0);
